@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'QuietBrokenVoice';
+    src: url('font/QuietBrokenVoice.ttf') format('truetype');
+}
+
+body {
+    padding: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caveira{
+    width: 200px;
+    height: auto;
+    filter: contrast(300%) brightness(300%) hue-rotate(310deg) saturate(400%) opacity(0%);
+    position: relative;
+    animation: tremendo 10s infinite;
+}
+
+@keyframes tremendo {
+    0%{
+    transform: rotate(0deg) translate(10px) rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg) translate(10px) rotate(-360deg);
+  }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 500px;
+    position: relative;
+    animation: tremendo 0s infinite;
+}
+
+main .titulo {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .titulo p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+main .jogo {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .boneco {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: -30px;
+}
+
+main .boneco .cabeca {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 6px solid black;
+    border-radius: 100%;
+    top: 20px;
+    left: 70px;
+    transform: rotate(45deg);
+}
+
+main .boneco .corpo {
+    display: none;
+    position: relative;
+    height: 80px;
+    border: 6px solid black;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    top: 20px;
+    left: 92px;
+}
+
+main .boneco .bracoE,
+.bracoD {
+    display: none;
+    position: relative;
+    height: 80px;
+    border: 6px solid black;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+main .boneco .pernaE,
+.pernaD {
+    display: none;
+    position: relative;
+    height: 80px;
+    border: 6px solid black;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+main .boneco .bracoE {
+    top: -5px;
+    left: 35px;
+    transform: rotate(45deg);
+}
+
+main .boneco .bracoD {
+    top: -224px;
+    left: 90px;
+    transform: rotate(315deg);
+}
+
+main .boneco .pernaE {
+    top: -97px;
+    left: 58px;
+    transform: rotate(30deg);
+}
+
+main .boneco .pernaD {
+    top: -274px;
+    left: 100px;
+    transform: rotate(330deg);
+}
+
+main .jogo .palavra {
+    font-size: 40px;
+}
+
+main .jogo form {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .jogo form input {
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main .jogo form input:focus{
+    outline: none;
+}
+
+main .jogo form button {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+main .jogo .reniciar {
+    display: none;
+    border: 2px solid white;
+    border-bottom: 6px solid;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
