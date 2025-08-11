@@ -38,7 +38,9 @@ let musicaAleatoria = musicas[Math.floor(Math.random() * musicas.length)];
 var estaTocando = false;
 
 // sistema do jogo
-let palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", "vazio", "traição"];
+// 26 palavras no total
+let palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", 
+    "vazio", "traicao", "cranio", "escapula", "umero", "clavicula", "costela", "radio", "femur", "tibia", "torax", "membro", "pescoco", "vertebra"];
 // pega um valor inteiro aleatório com base na quantidade de palavras
 let palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
 let letrasAdivinhadas = [];
@@ -82,7 +84,7 @@ adivinhar.addEventListener("submit", function (event) {
             tentativas--;
             erros++;
             if (tentativas === 1) {
-                musicaAleatoria.volume = 0.1;
+                musicaAleatoria.volume = 0.2;
                 musicaAleatoria.play();
                 body.fontFamily = "QuietBrokenVoice";
                 titulo.textContent = Math.floor(musicaAleatoria.duration);
@@ -120,7 +122,8 @@ reniciar.addEventListener("click", function (event) {
 
     chute.value = "";
     // volta o sistema do jogo
-    palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", "vazio", "traição"];
+    palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", 
+    "vazio", "traicao", "cranio", "escapula", "umero", "clavicula", "costela", "radio", "femur", "tibia", "torax", "membro", "pescoco", "vertebra"];
     palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
     letrasAdivinhadas = [];
     tentativas = 6;
@@ -143,6 +146,8 @@ reniciar.addEventListener("click", function (event) {
     for (let i = 0; i <= tentativas; i++) {
         boneco[i].style.display = 'none'
     }
+
+    musicaAleatoria = musicas[Math.floor(Math.random() * musicas.length)];
 
 })
 // funções para músicas

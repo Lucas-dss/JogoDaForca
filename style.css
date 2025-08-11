@@ -12,11 +12,11 @@ body {
     padding: 60px;
     background-color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.caveira{
+.caveira {
     width: 200px;
     height: auto;
     filter: contrast(300%) brightness(300%) hue-rotate(310deg) saturate(400%) opacity(0%);
@@ -25,12 +25,13 @@ body {
 }
 
 @keyframes tremendo {
-    0%{
-    transform: rotate(0deg) translate(10px) rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg) translate(10px) rotate(-360deg);
-  }
+    0% {
+        transform: rotate(0deg) translate(10px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(10px) rotate(-360deg);
+    }
 }
 
 main {
@@ -52,6 +53,7 @@ main .titulo {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
 
 main .titulo p {
@@ -146,6 +148,8 @@ main .boneco .pernaD {
 
 main .jogo .palavra {
     font-size: 40px;
+    text-align: center;
+    padding: 0 20px;
 }
 
 main .jogo form {
@@ -166,7 +170,7 @@ main .jogo form input {
     text-align: center;
 }
 
-main .jogo form input:focus{
+main .jogo form input:focus {
     outline: none;
 }
 
@@ -188,4 +192,115 @@ main .jogo .reniciar {
     color: white;
     padding: 10px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 779px) {
+    body {
+        padding: 60px 0;
+    }
+
+    .caveira {
+        width: 150px;
+        height: auto;
+    }
+
+    main {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 518px) {
+    body {
+        padding: 40px 0;
+    }
+
+    .caveira {
+        width: 100px;
+    }
+
+    main {
+        width: 700px;
+    }
+
+    main .titulo h1{
+        font-size: 24px;
+    }
+    main .titulo p{
+        font-size: 12px;
+    }
+    main .boneco {
+        width: 150px;
+        height: 150px;
+    }
+
+    main .boneco .cabeca {
+        width: 40px;
+        height: 40px;
+        border: 5px solid black;
+        top: 20px;
+        left: 50px;
+    }
+
+    main .boneco .corpo {
+        height: 80px;
+        border: 5px solid black;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        top: 20px;
+        left: 72px;
+    }
+
+    main .boneco .bracoE,
+    .bracoD {
+        height: 80px;
+        border: 5px solid black;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    main .boneco .pernaE,
+    .pernaD {
+        height: 80px;
+        border: 5px solid black;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    main .boneco .bracoE {
+        top: -22px;
+        left: 24px;
+    }
+
+    main .boneco .bracoD {
+        top: -203px;
+        left: 78px;
+    }
+
+    main .boneco .pernaE {
+        top: -110px;
+        left: 42px;
+    }
+
+    main .boneco .pernaD {
+        top: -264px;
+        left: 82px;
+    }
+
+    main .jogo .palavra {
+    font-size: 30px;
+    padding: 0 15px;
+}
+}
+@media only screen and (max-width: 300px) {
+    .caveira {
+        width: 50px;
+    }
+
+    main .jogo .palavra {
+    font-size: 20px;
+    padding: 0 10px;
+}
 }
