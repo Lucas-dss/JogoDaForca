@@ -8,6 +8,11 @@
     src: url('font/QuietBrokenVoice.ttf') format('truetype');
 }
 
+::selection{
+    background-color: #000;
+    color: #fff;
+}
+
 body {
     padding: 60px;
     background-color: black;

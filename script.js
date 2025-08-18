@@ -31,15 +31,16 @@ const musica1 = new Audio("music/80 OR LESS [HILL.GYM].mp3");
 const musica2 = new Audio("music/Cracked Empire [OM Mix].mp3");
 const musica3 = new Audio("music/2017x Last Life Theme.mp3");
 const musica4 = new Audio("music/Friends No More.mp3");
+const musica5 = new Audio("music/ULTRASONIC FAITH.mp3");
 
-let musicas = [musica1, musica2, musica3, musica4];
+let musicas = [musica1, musica2, musica3, musica4, musica5];
 
 let musicaAleatoria = musicas[Math.floor(Math.random() * musicas.length)];
 var estaTocando = false;
 
 // sistema do jogo
 // 26 palavras no total
-let palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", 
+let palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer",
     "vazio", "traicao", "cranio", "escapula", "umero", "clavicula", "costela", "radio", "femur", "tibia", "torax", "membro", "pescoco", "vertebra"];
 // pega um valor inteiro aleatório com base na quantidade de palavras
 let palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
@@ -84,7 +85,7 @@ adivinhar.addEventListener("submit", function (event) {
             tentativas--;
             erros++;
             if (tentativas === 1) {
-                musicaAleatoria.volume = 0.2;
+                musicaAleatoria.volume = 0.5;
                 musicaAleatoria.play();
                 body.fontFamily = "QuietBrokenVoice";
                 titulo.textContent = Math.floor(musicaAleatoria.duration);
@@ -122,8 +123,8 @@ reniciar.addEventListener("click", function (event) {
 
     chute.value = "";
     // volta o sistema do jogo
-    palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer", 
-    "vazio", "traicao", "cranio", "escapula", "umero", "clavicula", "costela", "radio", "femur", "tibia", "torax", "membro", "pescoco", "vertebra"];
+    palavras = ["dor", "mal", "tortura", "agonia", "aflicao", "angustia", "sofrimento", "crueldade", "amargura", "tormento", "estrela", "sofrer",
+        "vazio", "traicao", "cranio", "escapula", "umero", "clavicula", "costela", "radio", "femur", "tibia", "torax", "membro", "pescoco", "vertebra"];
     palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
     letrasAdivinhadas = [];
     tentativas = 6;
